@@ -11,3 +11,6 @@ mysqldump -usmartdealer -pxxxx vnpt_dealer vnpt_cdr vnpt_cdr_cancel vnpt_cdr_ren
 
 Export table theo điều kiện
 mysqldump -usmartdealer -pxxxx vnpt_dealer cdr_it --where="file in ('TICHHOP_20220423.txt','sps_20220423.txt','spi_20220423.txt','reservation_20220423.txt')" > /mnt/smartdealerbkp/cdr_it_20220423.sql
+
+Export all theo database
+mysqldump -usmartdealer -p vnpt_dealer --databases > /mnt/smartdealerbkp/smartdealer_20220209_full.sql
