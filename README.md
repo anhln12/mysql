@@ -33,3 +33,9 @@ mysqldump -usmartdealer -pxxxx vnpt_dealer --databases > /mnt/smartdealerbkp/sma
 
 sleep 300
 gzip /mnt/smartdealerbkp/smartdealer_${date}_full.sql
+
+Delete bin log
+mysql> show variables like 'expire_logs_days';
+mysql> PURGE BINARY LOGS BEFORE NOW() - INTERVAL 3 DAY;
+
+
