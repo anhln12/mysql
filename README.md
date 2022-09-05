@@ -38,4 +38,24 @@ Delete bin log
 mysql> show variables like 'expire_logs_days';
 mysql> PURGE BINARY LOGS BEFORE NOW() - INTERVAL 3 DAY;
 
-
+# Reset mật khẩu
+B1: Tiến hành stop dịch vụ MySQL
+```
+systemctl stop mysql
+```
+B2: Truy cập chế độ mysqld_safe
+```
+mysqld_safe –skip-grant-tables &
+```
+B3: Truy cập tài khoản root MySQL
+```
+mysql -u root
+```
+B4: Để thiết lập lại mật khẩu root MySQL , thực hiện lần lượt các lệnh
+```
+use mysql;
+update user set password=PASSWORD(“mynewpassword”) where User=’root’;     (thay mynewpassword bằng password của bạn cần đặt)
+flush privileges;
+quit
+```
+B5 : Khởi động lại dịch vụ MySQL
