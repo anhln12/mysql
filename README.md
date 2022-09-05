@@ -45,7 +45,7 @@ systemctl stop mysql
 ```
 B2: Truy cập chế độ mysqld_safe
 ```
-mysqld_safe –skip-grant-tables &
+mysqld_safe --skip-grant-tables --skip-networking &
 ```
 B3: Truy cập tài khoản root MySQL
 ```
@@ -54,7 +54,7 @@ mysql -u root
 B4: Để thiết lập lại mật khẩu root MySQL , thực hiện lần lượt các lệnh
 ```
 use mysql;
-update user set password=PASSWORD(“mynewpassword”) where User=’root’;     (thay mynewpassword bằng password của bạn cần đặt)
+update user set password=PASSWORD(“mynewpassword”) where User='root';     (thay mynewpassword bằng password của bạn cần đặt)
 flush privileges;
 quit
 ```
