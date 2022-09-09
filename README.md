@@ -15,6 +15,10 @@ mysqldump -usmartdealer -pxxxx vnpt_dealer cdr_it --where="file in ('TICHHOP_202
 Export all theo database
 mysqldump -usmartdealer -p vnpt_dealer --databases > /mnt/smartdealerbkp/smartdealer_20220209_full.sql
 
+Import
+```
+mysql -u username -p database_name < file.sql
+```
 Backup ignore
 00 03 * * * /opt/backup/mysql/backup_ignore_cdr.sh >> /opt/backup/backup_ignore_cdr.log
 
