@@ -61,7 +61,9 @@ quit
 B5 : Khởi động lại dịch vụ MySQL
 
 # Tạo Database và User
+```
 MariaDB [(none)]> create database zabbix character set utf8 collate utf8_bin;
 MariaDB [(none)]> create user zabbix@localhost identified by 'password';
 MariaDB [(none)]> grant all privileges on zabbix.* to zabbix@localhost;
 MariaDB [(none)]> quit;
+```
