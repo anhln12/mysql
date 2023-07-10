@@ -10,7 +10,7 @@
 
 DB_USER="root"
 DB_PASS="123456a@"
-DB_NAME="lcs_nice_number"
+DB_NAME="database-name"
 BACKUP_DIR="/database/backupdir/mysql"
 DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 
