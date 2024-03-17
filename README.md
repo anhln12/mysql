@@ -83,7 +83,7 @@ FROM information_schema.tables
 GROUP BY table_schema; 
 ```
 
-Fix lỗi mysql-bin files chiếm dung lượng
+# Fix lỗi mysql-bin files chiếm dung lượng
 Binary logs có dạng mysql-bin.xxx trong thư mục /var/lib/mysql 
 ```
 mysql> SHOW BINARY LOGS;
