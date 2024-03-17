@@ -82,3 +82,29 @@ SELECT table_schema "DB Name",
 FROM information_schema.tables 
 GROUP BY table_schema; 
 ```
+
+Fix lỗi mysql-bin files chiếm dung lượng
+Binary logs có dạng mysql-bin.xxx trong thư mục /var/lib/mysql 
+```
+mysql> SHOW BINARY LOGS;
++——————+———–+
+| Log_name | File_size |
++——————+———–+
+| mysql-bin.000008 | 641222072 |
+| mysql-bin.000009 | 324173772 |
+| mysql-bin.000010 | 53931666 |
+| mysql-bin.000011 | 10360680 |
+```
+```
+mysql> PURGE BINARY LOGS TO ‘mysql-bin.000011’;
+```
+Khi đó hệ thống sẽ giải phóng xóa các file binary logs trước mysql-bin.000011.
+
+Cấu hình disable hoặc rotate file log
+
+Để thiết lập cho hệ thống không phát sinh các file này thì cần bỏ thông số: log-bin=mysql-bin trong file /etc/my.cnf sau đó restart lại dịch vụ mysql.
+
+Hoặc muốn hệ thống tự động rotate và giữ lại các file này trong 3 ngày thì có thể thêm thông số: expire_logs_days=3 trong file /etc/my.cnf sau đó restart lại dịch vụ hoặc sử dụng command line mysql manager: 
+```
+mysql> SET GLOBAL expire_logs_days = 3;
+```
