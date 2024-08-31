@@ -12,3 +12,16 @@ Refer: https://github.com/sysown/proxysql
 **Cài đặt**
 Chuẩn bị
 
+
+
+
+
+
+
+
+
+
+ProxySQL Admin> SHOW CREATE TABLE mysql_group_replication_hostgroups\G
+
+
+
