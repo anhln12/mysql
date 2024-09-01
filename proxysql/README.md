@@ -54,6 +54,7 @@ PIDFile=/opt/proxysql/proxysql.pid
 systemctl daemon-reload
 systemctl restart proxysql
 systemctl status proxysql
+journalctl -xeu proxysql.service
 ```
 
 
