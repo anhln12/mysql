@@ -45,6 +45,15 @@ errorlog="/opt/proxysql/proxysql.log"
 threads=12
 mysql-max_connections = 65000
 interfaces="0.0.0.0:3306"
+
+vi /etc/systemd/system/multi-user.target.wants/proxysql.service
+PIDFile=/var/lib/proxysql/proxysql.pid
+==>
+PIDFile=/opt/proxysql/proxysql.pid
+
+systemctl daemon-reload
+systemctl restart proxysql
+systemctl status proxysql
 ```
 
 
