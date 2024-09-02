@@ -1,4 +1,4 @@
-Monitoring Mysql InnoDB Cluster
+**Monitoring Mysql InnoDB Cluster**
 - Check version
 ```
 [root@mysql03 opt]# mysqlsh --version
@@ -26,6 +26,8 @@ No default schema selected; type \use <schema> to set one.
 
 or mysqlsh --uri clusteradmin@mysql03:3306 -- cluster status
 
+# Install And Deploy MySQL 8 InnoDB Cluster with 3 node under Centos 8
+https://ahelpme.com/software/mysql/install-and-deploy-mysql-8-innodb-cluster-with-3-nodes-under-centos-8-and-mysql-router-for-ha/#google_vignette
 
 
 
