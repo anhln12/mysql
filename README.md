@@ -1,3 +1,6 @@
+# Course
+https://www.youtube.com/@mughees52/playlists
+
 # Mysql
 
 Export table
