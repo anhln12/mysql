@@ -334,6 +334,17 @@ The instance 'mysql01.mobiedu.vn:3306' was successfully added to the cluster.
 
 ```
 
+```
+mysql> select * from performance_schema.replication_group_members;
++---------------------------+--------------------------------------+--------------------+-------------+--------------+-------------+----------------+----------------------------+
+| CHANNEL_NAME              | MEMBER_ID                            | MEMBER_HOST        | MEMBER_PORT | MEMBER_STATE | MEMBER_ROLE | MEMBER_VERSION | MEMBER_COMMUNICATION_STACK |
++---------------------------+--------------------------------------+--------------------+-------------+--------------+-------------+----------------+----------------------------+
+| group_replication_applier | bab6f475-38a2-11ed-be4c-0200109d0025 | mysql03.mobiedu.vn |        3306 | ONLINE       | PRIMARY     | 8.0.30         | MySQL                      |
+| group_replication_applier | bbb91e62-38a2-11ed-b5f1-0200217e0026 | mysql02.mobiedu.vn |        3306 | ONLINE       | SECONDARY   | 8.0.30         | MySQL                      |
+| group_replication_applier | be27176a-38a2-11ed-a593-02005cf90027 | mysql01.mobiedu.vn |        3306 | ONLINE       | SECONDARY   | 8.0.30         | MySQL                      |
++---------------------------+--------------------------------------+--------------------+-------------+--------------+-------------+----------------+-------------
+```
+
 refer: 
 - https://stackoverflow.com/questions/55036255/a-node-in-mysql-5-7-innodb-cluster-is-crashed-and-unable-to-re-join-the-crashed
 - https://ahelpme.com/software/mysql/recovery-of-mysql-8-cluster-instance-after-server-crash-and-corrupted-data-in-log-event
