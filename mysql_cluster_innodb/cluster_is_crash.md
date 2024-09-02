@@ -334,6 +334,8 @@ The instance 'mysql01.mobiedu.vn:3306' was successfully added to the cluster.
 
 ```
 
-refer: https://stackoverflow.com/questions/55036255/a-node-in-mysql-5-7-innodb-cluster-is-crashed-and-unable-to-re-join-the-crashed
+refer: 
+- https://stackoverflow.com/questions/55036255/a-node-in-mysql-5-7-innodb-cluster-is-crashed-and-unable-to-re-join-the-crashed
+- https://ahelpme.com/software/mysql/recovery-of-mysql-8-cluster-instance-after-server-crash-and-corrupted-data-in-log-event
 
 
