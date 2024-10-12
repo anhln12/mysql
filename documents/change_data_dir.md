@@ -24,6 +24,10 @@ Add or modify the following lines:
 [mysqld]
 datadir = /new/mysql/data
 ```
+If your socker file is located in the data directiory, you might also need to update the socker variable:
+```
+socket = /new/mysql/data/mysql.sock
+```
 
 4. Restar Mysql
 ```
